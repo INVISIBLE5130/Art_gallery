@@ -1,0 +1,48 @@
+.enter{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+
+  .enter__button__passive{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 15%;
+    background: black;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .enter__button__passive:hover{
+    background: white;
+    color: black;
+  }
+
+  .enter__button__active{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 15%;
+    background: white;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .enter__button__active:hover{
+    background: black;
+    color: white;
+  }
+}

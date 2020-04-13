@@ -1,0 +1,15 @@
+.query{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 10%;
+  border: 1px solid black;
+  margin-left: 3%;
+  cursor: pointer;
+}
+
+.query:hover{
+  background: black;
+  color: white;
+}
