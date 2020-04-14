@@ -1,6 +1,7 @@
 import React from "react";
 import './Order.css';
 import Waybill from "./Waybill/Waybill";
+import Table from "../../Table/Table";
 
 class Order extends React.Component{
 
@@ -22,6 +23,7 @@ class Order extends React.Component{
                     </option>
                 </select>
                 <Waybill/>
+                <Table/>
             </div>
         )
     }

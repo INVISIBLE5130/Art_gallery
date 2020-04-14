@@ -1,6 +1,7 @@
 import React from "react";
 import './Picture.css';
 import Category from "./Category/Category";
+import Table from "../../Table/Table";
 
 class Picture extends React.Component{
 
@@ -22,6 +23,7 @@ class Picture extends React.Component{
                     </option>
                 </select>
                 <Category/>
+                <Table/>
             </div>
         )
     }

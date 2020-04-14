@@ -1,6 +1,7 @@
 import React from "react";
 import './Delivery.css';
 import OrderedItems from "./OrderedItems/OrderedItems";
+import Table from "../../Table/Table";
 
 class Delivery extends React.Component{
 
@@ -28,6 +29,7 @@ class Delivery extends React.Component{
                     </option>
                 </select>
                 <OrderedItems/>
+                <Table/>
             </div>
         )
     }

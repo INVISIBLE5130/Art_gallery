@@ -1,6 +1,7 @@
 import React from "react";
 import './Artist.css';
 import Location from "./Location/Location";
+import Table from "../../Table/Table";
 
 class Artist extends React.Component{
 
@@ -28,6 +29,7 @@ class Artist extends React.Component{
                     </option>
                 </select>
                 <Location/>
+                <Table/>
             </div>
         )
     }

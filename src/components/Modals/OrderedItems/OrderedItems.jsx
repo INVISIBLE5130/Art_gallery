@@ -1,6 +1,7 @@
 import React from "react";
 import './OrderedItems.css';
 import Picture from "./Picture/Picture";
+import Table from "../../Table/Table";
 
 class OrderedItems extends React.Component{
 
@@ -22,6 +23,7 @@ class OrderedItems extends React.Component{
                     </option>
                 </select>
                 <Picture/>
+                <Table/>
             </div>
         )
     }

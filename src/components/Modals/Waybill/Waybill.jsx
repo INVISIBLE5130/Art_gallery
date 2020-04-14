@@ -1,6 +1,7 @@
 import React from "react";
 import './Waybill.css';
 import Status from "./PaymentStatus/Status";
+import Table from "../../Table/Table";
 
 class Waybill extends React.Component{
 
@@ -22,6 +23,7 @@ class Waybill extends React.Component{
                     </option>
                 </select>
                 <Status/>
+                <Table/>
             </div>
         )
     }
