@@ -1,0 +1,13 @@
+div {
+  display: flex;
+}
+div h1 {
+  margin-right: 2%;
+}
+div .customer {
+  margin-right: 5%;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  outline: none;
+}

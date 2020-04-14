@@ -3,18 +3,12 @@ import './Query.css';
 
 class Query extends React.Component{
     render(){
-        const {name} = this.props;
-        // const {queryTitle} = this.state;
-
-        function openQuery() {
-            let modal = document.getElementById('modal');
-            modal.classList.add('active');
-        }
+        const {item, onOpenModal} = this.props;
 
         return(
-            <div className="query" onClick={ () => openQuery () }>
+            <div className="query" onClick={ () => onOpenModal (true, item.modal) }>
                 <p className="query__title">
-                    {name}
+                    {item.name}
                 </p>
             </div>
         )

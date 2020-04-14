@@ -1,41 +1,39 @@
 import React from "react";
 import './Modal.css';
 import Card from "../Modals/Card/Card";
+import Customer from "../Modals/Customer/Customer";
+import Order from "../Modals/Order/Order";
+import Waybill from "../Modals/Waybill/Waybill";
+import Delivery from "../Modals/Delivery/Delivery";
+import OrderedItems from "../Modals/OrderedItems/OrderedItems";
+import Picture from "../Modals/Picture/Picture";
+import Artist from "../Modals/Artist/Artist";
 
 class Modal extends React.Component{
-    // state={
-    //     queryTitle: [
-    //         {name: 'Payment'},
-    //         {name: 'Customer'},
-    //         {name: 'Order'},
-    //         {name: 'Waybill'},
-    //         {name: 'Delivery'},
-    //         {name: 'Ordered items'},
-    //         {name: 'Picture'},
-    //         {name: 'Artist'}
-    //     ]
-    // }
 
     render(){
-
-        function openQuery() {
-            let modal = document.getElementById('modal');
-            modal.classList.remove('active');
-        }
+        const {currentModalId, onOpenModal, title} = this.props;
 
         return(
-            <div id="modal">
+            <div id="modal" className="active">
                 <div className="modal__title">
                     <p className="title">
-                        {/*{this.state.queryTitle.name}*/}
-                        Payment
+                        {title}
                     </p>
                 </div>
-                <Card/>
+
+                { currentModalId === 'payment' ? <Card/> : null }
+                { currentModalId === 'customer' ? <Customer/> : null }
+                { currentModalId === 'order' ? <Order/> : null }
+                { currentModalId === 'waybill' ? <Waybill/> : null }
+                { currentModalId === 'delivery' ? <Delivery/> : null }
+                { currentModalId === 'orderedItems' ? <OrderedItems/> : null }
+                { currentModalId === 'picture' ? <Picture/> : null }
+                { currentModalId === 'artist' ? <Artist/> : null }
                 <button className="send" type="submit" value="submit" formMethod="post">
                     Submit
                 </button>
-                <button className="close" onClick={ () => openQuery () }>
+                <button className="close" onClick={ () => onOpenModal(false) }>
                     Close
                 </button>
             </div>
