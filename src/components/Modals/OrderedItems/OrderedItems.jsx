@@ -6,9 +6,11 @@ import Table from "../../Table/Table";
 class OrderedItems extends React.Component{
 
     render(){
+        const {handleChange, data} = this.props;
+
         return(
             <div>
-                <select className="ordered_items">
+                <select onChange={handleChange} className="ordered_items">
                     <option>
                         Choose delivery status:
                     </option>
@@ -22,8 +24,8 @@ class OrderedItems extends React.Component{
                         Not sent out
                     </option>
                 </select>
-                <Picture/>
-                <Table/>
+                <Picture handleChange={handleChange}/>
+                <Table data={data}/>
             </div>
         )
     }

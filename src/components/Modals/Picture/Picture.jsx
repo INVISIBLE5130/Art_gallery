@@ -6,24 +6,26 @@ import Table from "../../Table/Table";
 class Picture extends React.Component{
 
     render(){
+        const {handleChange, data} = this.props;
+
         return(
             <div>
-                <select className="picture">
+                <select onChange={handleChange} className="picture">
                     <option>
-                        Choose picture status:
+                        Choose artist full name:
                     </option>
                     <option value="1">
-                        Done
+                        Криволап Анатолій Дмитрович
                     </option>
                     <option value="2">
-                        In process
+                        Марчук Іван Степанович
                     </option>
                     <option value="3">
-                        Undone
+                        Ройтбурд Олександр Анатолійович
                     </option>
                 </select>
-                <Category/>
-                <Table/>
+                <Category handleChange={handleChange}/>
+                <Table data={data}/>
             </div>
         )
     }

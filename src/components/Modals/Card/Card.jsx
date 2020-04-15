@@ -7,11 +7,13 @@ import Table from "../../Table/Table";
 class Card extends React.Component{
 
     render(){
+        const {handleChange, data} = this.props;
+
         return(
             <div>
-                <Method/>
-                <Customer/>
-                <Table/>
+                <Method handleChange={handleChange}/>
+                <Customer handleChange={handleChange}/>
+                <Table data={data}/>
             </div>
         )
     }

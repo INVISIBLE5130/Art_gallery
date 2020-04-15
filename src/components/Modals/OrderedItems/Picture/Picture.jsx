@@ -4,8 +4,10 @@ import './Picture.css';
 class Picture extends React.Component{
 
     render(){
+        const {handleChange} = this.props;
+
         return(
-            <select className="picture">
+            <select onChange={handleChange} className="picture">
                 <option>
                     Choose picture name:
                 </option>

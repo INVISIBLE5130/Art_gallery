@@ -4,8 +4,10 @@ import './Location.css';
 class Location extends React.Component{
 
     render(){
+        const {handleChange} = this.props;
+
         return(
-            <select className="location">
+            <select onChange={handleChange} className="location">
                 <option>
                     Choose artist location:
                 </option>

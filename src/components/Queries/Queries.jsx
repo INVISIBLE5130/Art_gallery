@@ -16,7 +16,8 @@ class Queries extends React.Component{
                 {name: 'Query 5', modal: 'delivery', title: 'Delivery'},
                 {name: 'Query 6', modal: 'orderedItems', title: 'OrderedItems'},
                 {name: 'Query 7', modal: 'picture', title: 'Picture'},
-                {name: 'Query 8', modal: 'artist', title: 'Artist'}
+                {name: 'Query 8', modal: 'artist', title: 'Artist'},
+                {name: 'Query 9', modal: 'all', title: 'All'}
             ],
             modalIsOpen:false,
             currentModalId: null

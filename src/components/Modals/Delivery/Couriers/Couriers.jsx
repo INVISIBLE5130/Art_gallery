@@ -1,32 +1,31 @@
 import React from "react";
-import './OrderedItems.css';
+import './Couriers.css';
 
-class OrderedItems extends React.Component{
+class Couriers extends React.Component{
 
     render(){
+        const {handleChange} = this.props;
+
         return(
-            <select className="ordered_items">
+            <select onChange={handleChange} className="couriers">
                 <option>
-                    Choose ordered item:
+                    Choose courier:
                 </option>
                 <option value="1">
-                    1
+                    Nathan Mendez
                 </option>
                 <option value="2">
-                    2
+                    Brittany Hubbard
                 </option>
                 <option value="3">
-                    3
+                    Zephania Mcgee
                 </option>
                 <option value="4">
-                    4
-                </option>
-                <option value="5">
-                    5
+                    Kenyon Conner
                 </option>
             </select>
         )
     }
 }
 
-export default OrderedItems;
+export default Couriers;

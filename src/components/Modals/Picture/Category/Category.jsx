@@ -4,8 +4,10 @@ import './Category.css';
 class Category extends React.Component{
 
     render(){
+        const {handleChange} = this.props;
+
         return(
-            <select className="category">
+            <select onChange={handleChange} className="category">
                 <option>
                     Choose category:
                 </option>

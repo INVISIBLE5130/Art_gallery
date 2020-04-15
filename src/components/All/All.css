@@ -1,5 +1,7 @@
-.card {
-  margin-right: 5%;
+div {
+  display: flex;
+}
+div .all {
   background: white;
   color: black;
   border: 1px solid black;

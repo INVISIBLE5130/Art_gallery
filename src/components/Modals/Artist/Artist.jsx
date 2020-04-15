@@ -6,9 +6,11 @@ import Table from "../../Table/Table";
 class Artist extends React.Component{
 
     render(){
+        const {handleChange, data} = this.props;
+
         return(
             <div>
-                <select className="artist">
+                <select onChange={handleChange} className="artist">
                     <option>
                         Choose average price of paintings:
                     </option>
@@ -28,8 +30,8 @@ class Artist extends React.Component{
                         $ 35 000
                     </option>
                 </select>
-                <Location/>
-                <Table/>
+                <Location handleChange={handleChange}/>
+                <Table data={data}/>
             </div>
         )
     }

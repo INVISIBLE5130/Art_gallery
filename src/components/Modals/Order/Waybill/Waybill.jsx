@@ -4,25 +4,27 @@ import './Waybill.css';
 class Waybill extends React.Component{
 
     render(){
+        const {handleChange} = this.props;
+
         return(
-            <select className="order">
+            <select onChange={handleChange} className="waybill">
                 <option>
                     Choose waybill number:
                 </option>
-                <option value="1">
+                <option value="id=select1">
                     1
                 </option>
-                <option value="2">
-                    2
+                <option value="id=select6">
+                    6
                 </option>
-                <option value="3">
-                    3
+                <option value="id=select7">
+                    7
                 </option>
-                <option value="4">
-                    4
+                <option value="id=select8">
+                    8
                 </option>
-                <option value="5">
-                    5
+                <option value="id=select9">
+                    9
                 </option>
             </select>
         )

@@ -6,24 +6,26 @@ import Table from "../../Table/Table";
 class Order extends React.Component{
 
     render(){
+        const {handleChange, data} = this.props;
+
         return(
             <div>
-                <select className="order">
+                <select onChange={handleChange} className="order">
                     <option>
                         Choose status:
                     </option>
-                    <option value="1">
+                    <option value="?status=select1&">
                         Formed
                     </option>
-                    <option value="2">
+                    <option value="?status=select2&">
                         Forming
                     </option>
-                    <option value="3">
+                    <option value="?status=select3&">
                         Not formed
                     </option>
                 </select>
-                <Waybill/>
-                <Table/>
+                <Waybill onChange={handleChange}/>
+                <Table data={data}/>
             </div>
         )
     }

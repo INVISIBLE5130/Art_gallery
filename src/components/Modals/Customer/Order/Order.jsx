@@ -4,24 +4,26 @@ import './Order.css';
 class Order extends React.Component{
 
     render(){
+        const {handleChange} = this.props;
+
         return(
-            <select className="order">
+            <select onChange={handleChange} className="order">
                 <option>
                     Choose order:
                 </option>
-                <option value="1">
+                <option value="id=select1">
                     1
                 </option>
-                <option value="2">
+                <option value="id=select2">
                     2
                 </option>
-                <option value="3">
+                <option value="id=select3">
                     3
                 </option>
-                <option value="4">
+                <option value="id=select4">
                     4
                 </option>
-                <option value="5">
+                <option value="id=select5">
                     5
                 </option>
             </select>
