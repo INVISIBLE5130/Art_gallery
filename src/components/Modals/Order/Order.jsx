@@ -14,13 +14,13 @@ class Order extends React.Component{
                     <option>
                         Choose status:
                     </option>
-                    <option value="?status=select1&">
+                    <option value="orders/done">
                         Formed
                     </option>
-                    <option value="?status=select2&">
+                    <option value="orders/in progress">
                         Forming
                     </option>
-                    <option value="?status=select3&">
+                    <option value="orders/in progress">
                         Not formed
                     </option>
                 </select>

@@ -11,19 +11,19 @@ class Order extends React.Component{
                 <option>
                     Choose order:
                 </option>
-                <option value="id=select1">
+                <option value="/bogdan79@xxxhot.fun">
                     1
                 </option>
-                <option value="id=select2">
+                <option value="/kira.ponomarenk@bkrointernational.site">
                     2
                 </option>
-                <option value="id=select3">
+                <option value="/kramarenko.serg@xygy.site">
                     3
                 </option>
-                <option value="id=select4">
+                <option value="/sereda.irina@devachek.org">
                     4
                 </option>
-                <option value="id=select5">
+                <option value="/margarita.lisen@baat.site">
                     5
                 </option>
             </select>

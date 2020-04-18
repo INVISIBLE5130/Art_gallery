@@ -11,19 +11,19 @@ class Waybill extends React.Component{
                 <option>
                     Choose waybill number:
                 </option>
-                <option value="id=select1">
+                <option value="/1">
                     1
                 </option>
-                <option value="id=select6">
+                <option value="/6">
                     6
                 </option>
-                <option value="id=select7">
+                <option value="/7">
                     7
                 </option>
-                <option value="id=select8">
+                <option value="/8">
                     8
                 </option>
-                <option value="id=select9">
+                <option value="/9">
                     9
                 </option>
             </select>

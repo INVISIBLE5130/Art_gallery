@@ -11,20 +11,20 @@ class Method extends React.Component{
                 <option>
                     Choose payment method:
                 </option>
-                <option value="?type=select1&">
-                    Waybill
+                <option value="payments/готівка">
+                    Готівка
                 </option>
-                <option value="?type=select2&">
-                    Credit
+                <option value="payments/картка">
+                    Кредит
                 </option>
-                <option value="?type=select3&">
-                    Parts
+                <option value="payments/картка">
+                    Частинами
                 </option>
-                <option value="?type=select4&">
-                    Online
+                <option value="payments/картка">
+                    Онлайн
                 </option>
-                <option value="?type=select5&">
-                    Installment plan
+                <option value="payments/готівка">
+                    При отриманні
                 </option>
             </select>
         )

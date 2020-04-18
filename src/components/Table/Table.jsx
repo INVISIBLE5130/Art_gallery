@@ -9,9 +9,9 @@ class Table extends Component {
         if (!data) return 'Loading...'
         console.log(data)
 
-        return (<JSONViewer
-            json = {data}
-        />)
+        return (
+            <JSONViewer json = {data}/>
+        )
     }
 }
 

@@ -14,7 +14,8 @@ import axios from "axios";
 class Modal extends React.Component{
 
     state = {
-        value: undefined,
+        value: null,
+        secondValue: "",
         data: null
     };
 
@@ -23,18 +24,39 @@ class Modal extends React.Component{
         this.setState({ value: value });
     }
 
+    secondHandleChange = (e) => {
+        const secondValue = e.target.value;
+        this.setState({ secondValue: secondValue });
+    }
+
     handlePrint = () => {
-        const {value} = this.state;
-        if (value === null) {
+        const {value, secondValue} = this.state;
+        if (value === null && secondValue === null) {
             console.log('error')
         } else {
             this.getData()
         }
+
+        if (value !== null && secondValue === null) {
+            this.getDataTable()
+        }
     }
 
     getData = () => {
-        axios.get(`http://localhost:5000/api/v1/${this.state.value}`)
+        axios.get(`http://localhost:5000/api/v1/${this.state.value}${this.state.secondValue}`)
+            .then((response) => {
+                const data = response.data;
+                this.setState({data: data})
+                console.log(data)
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    }
 
+    getDataTable = () => {
+        axios.get(`http://localhost:5000/api/v1/${this.state.value}`)
             .then((response) => {
                 const data = response.data;
                 this.setState({data: data})
@@ -58,14 +80,46 @@ class Modal extends React.Component{
                     </p>
                 </div>
 
-                { currentModalId === 'payment' ? <Card data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'customer' ? <Customer data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'order' ? <Order data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'waybill' ? <Waybill data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'delivery' ? <Delivery data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'orderedItems' ? <OrderedItems data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'picture' ? <Picture data={data} handleChange={this.handleChange}/> : null }
-                { currentModalId === 'artist' ? <Artist data={data} handleChange={this.handleChange}/> : null }
+                { currentModalId === 'payment' ? <Card
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'customer' ? <Customer
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'order' ? <Order
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'waybill' ? <Waybill
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'delivery' ? <Delivery
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'orderedItems' ? <OrderedItems
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'picture' ? <Picture
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
+                { currentModalId === 'artist' ? <Artist
+                    data={data}
+                    handleChange={this.handleChange}
+                    secondHandleChange={this.secondHandleChange}
+                /> : null }
                 { currentModalId === 'all' ? <All data={data} handleChange={this.handleChange}/> : null }
                 <button onClick={this.handlePrint} className="send" type="submit" value="submit" formMethod="post">
                     Submit

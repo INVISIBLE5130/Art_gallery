@@ -14,19 +14,19 @@ class Customer extends React.Component{
                     <option>
                         Choose customer email:
                     </option>
-                    <option value="?email=select1&">
+                    <option value="сustomers/1">
                         bogdan79@xxxhot.fun
                     </option>
-                    <option value="?email=select2&">
+                    <option value="сustomers/2">
                         kira.ponomarenk@bkrointernational.site
                     </option>
-                    <option value="?email=select3&">
+                    <option value="сustomers/3">
                         kramarenko.serg@xygy.site
                     </option>
-                    <option value="?email=select4&">
+                    <option value="сustomers/4">
                         sereda.irina@devachek.org
                     </option>
-                    <option value="?email=select5&">
+                    <option value="сustomers/5">
                         margarita.lisen@baat.site
                     </option>
                 </select>

@@ -4,27 +4,27 @@ import './Customer.css';
 class Customer extends React.Component{
 
     render(){
-        const {handleChange} = this.props;
+        const {secondHandleChange} = this.props;
 
         return(
             <div>
-                <select onChange={handleChange} className="customer">
+                <select onChange={secondHandleChange} className="customer">
                     <option>
                         Choose customer:
                     </option>
-                    <option value="fullName=select1">
+                    <option value="/success">
                         Сергієнко Ірина Михайлівна
                     </option>
-                    <option value="fullName=select2">
+                    <option value="/success">
                         Василенко Віталій Валентинович
                     </option>
-                    <option value="fullName=select3">
+                    <option value="/success">
                         Панасюк Михайло Йосипович
                     </option>
-                    <option value="fullName=select4">
+                    <option value="/success">
                         Середа Ніна Василівна
                     </option>
-                    <option value="fullName=select5">
+                    <option value="/success">
                         Бондаренко Анастасія Йосипівна
                     </option>
                 </select>
